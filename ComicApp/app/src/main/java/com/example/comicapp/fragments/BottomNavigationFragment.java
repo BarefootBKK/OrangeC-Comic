@@ -1,0 +1,56 @@
+package com.example.comicapp.fragments;
+
+import android.content.res.ColorStateList;
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.design.widget.BottomNavigationView;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+
+import com.example.comicapp.R;
+
+public class BottomNavigationFragment extends BaseFragment {
+    private BottomNavigationView navigationView;
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_bottomnavigation, container, false);
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        navigationView = getActivity().findViewById(R.id.fragment_bm_navigation);
+        navigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        // 设置导航栏图标和字体样式
+        navigationView.setItemIconTintList(null);
+        ColorStateList colorStateList = getResources().getColorStateList(R.color.bm_navigation_text);
+        navigationView.setItemTextColor(colorStateList);
+        replaceFragment(FRAGMENT_HOME);
+    }
+
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+            switch (menuItem.getItemId()) {
+                case R.id.bm_navigation_home:
+                    replaceFragment(FRAGMENT_HOME);
+                    break;
+                case R.id.bm_navigation_bookshelf:
+                    replaceFragment(FRAGMENT_BOOKSHELF);
+                    break;
+                case R.id.bm_navigation_user:
+                    replaceFragment(FRAGMENT_USER);
+                    break;
+                default:
+                    return false;
+            }
+            return true;
+        }
+    };
+}
