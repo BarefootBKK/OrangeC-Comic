@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="faColor">#509bf7</color>
+    <color name="refreshColor">#509bf7</color>
+    <color name="colorBMNavigationText">#395ebc</color>
+    <color name="floatingActionButton">#FA9144</color>
+    <color name="startColor">#F59C64</color>
+    <color name="darkTheme">#D3661A</color>
+    <color name="tabBlueColor">#509bf7</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+</resources>

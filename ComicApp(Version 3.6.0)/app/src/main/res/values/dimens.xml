@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- icon与导航栏顶部间隔大小 -->
+    <dimen tools:override="true" name="design_bottom_navigation_margin">5dp</dimen>
+    <!-- 导航栏高度 -->
+    <dimen tools:override="true" name="design_bottom_navigation_height">48dp</dimen>
+    <!-- text大小 -->
+    <dimen tools:override="true" name="design_bottom_navigation_text_size">11sp</dimen>
+    <!-- text大小 -->
+    <dimen tools:override="true" name="design_bottom_navigation_active_text_size">11sp</dimen>
+    <!--   -->
+    <dimen name="design_fab_size_normal">55dp</dimen>
+
+    <dimen name="tabTextSize">17sp</dimen>
+
+</resources>
